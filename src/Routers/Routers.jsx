@@ -8,7 +8,7 @@ const Routers = () => {
     return (
         <div>
             <Routes>
-                <Route path='/' element={<FirstPage />} />
+                <Route path='workflow/' element={<FirstPage />} />
                 <Route path='/get-start' element={<SecondPage />} />
                 <Route path='/Home' element={<Home />} />
             </Routes>
