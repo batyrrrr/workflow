@@ -1,0 +1,81 @@
+@use '../../scss/' as *;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+
+    &__logo {}
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 5px;
+    }
+
+
+    &__actions {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+
+    &__gen {
+        position: relative;
+
+        @media only screen and (max-width:1000px) {
+            display: none;
+        }
+    }
+
+    input[type='text'] {
+        font-family: 'Nunito', sans-serif;
+        border: none;
+        outline: none;
+        padding: 10px 0px 10px 40px;
+        border-radius: 31px;
+        min-width: 200px;
+        font-size: 17px;
+        transition: .2s all ease 0s;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+        &:focus {
+            box-shadow: $box-shadow;
+        }
+    }
+
+
+    &__search {
+        position: absolute;
+        font-size: 25px;
+        top: 50%;
+        transform: translateY(-56%);
+        left: 5px;
+        padding: 5px;
+    }
+
+    &__sign {
+        display: flex;
+        gap: 20px;
+
+        &__index {
+            padding: 11px 33px;
+            border-radius: 25px;
+            background-color: $red;
+            font-size: 21px;
+            font-weight: 400px;
+            color: $white;
+            cursor: pointer;
+            transition: .1s all ease 0s;
+
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+            &:hover {
+                background-color: transparent;
+                color: $redder;
+            }
+        }
+    }
+}

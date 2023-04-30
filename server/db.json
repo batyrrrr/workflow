@@ -1,0 +1,23 @@
+{
+    "homePageSlider": [
+        {
+            "id": 1,
+            "src": "../../../public/adg.mp4",
+            "name": "Batyr",
+            "time": "",
+            "adventure": "",
+            "rating": "",
+            "rating-sum": ""
+        },
+        {
+            "id": 2,
+            "title": "Heelo world",
+            "name": "Zhako"
+        },
+        {
+            "id": 3,
+            "title": "Heelo world",
+            "name": "Vova"
+        }
+    ]
+}

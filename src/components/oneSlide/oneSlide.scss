@@ -1,0 +1,118 @@
+@use '../../scss/' as *;
+
+.oneslide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 80vh;
+    position: relative;
+
+    .container {}
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.137);
+    }
+
+    &__content {
+        position: absolute;
+        color: $whiter;
+        max-width: 70%;
+        display: flex;
+        flex-direction: column;
+        bottom: 60px;
+        gap: 50px;
+
+        @include tablet {
+            bottom: 140px;
+            gap: 20px;
+            max-width: 80%;
+        }
+
+        @include mobile {
+            bottom: 80px;
+            gap: 20px;
+            max-width: 80%;
+        }
+
+        ._title {
+            font-size: rem(60);
+
+            @include tablet {
+                font-size: rem(45);
+
+            }
+        }
+
+        ._overview {
+            font-size: rem(19);
+
+            @include tablet {
+                font-size: rem(16);
+
+            }
+        }
+    }
+
+    &__sections {
+        margin-left: 80%;
+        display: flex;
+        gap: 15px;
+        font-family: 'Nunito', sans-serif;
+
+        @include tablet {
+            margin-left: 60%;
+
+        }
+
+        @include mobile {
+            margin-left: 0;
+
+        }
+
+        ._btn {
+            border: 1px solid transparent;
+            font-size: rem(18);
+            color: $whiter;
+            padding: 9px 15px;
+            border-radius: 5px;
+            background-color: $red;
+            font-weight: 700;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+
+        &__icon {}
+
+        &__button {
+            outline: none;
+            border: none;
+            background-color: transparent;
+            font-size: rem(18);
+            color: $whiter;
+            cursor: pointer;
+            font-weight: 700;
+
+        }
+    }
+
+    &__button {}
+
+    &__show {
+        cursor: pointer;
+    }
+
+    ._hover:hover {
+        background-color: $redder;
+        transition: all .2s ease;
+    }
+}

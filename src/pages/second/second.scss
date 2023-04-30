@@ -1,0 +1,108 @@
+@use '../../scss/' as *;
+
+.secondPage {
+    width: 100vw;
+    height: 100vh;
+    background: url('../../../public/bg-secPage.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+    color: $white;
+
+
+    &__darker {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.753);
+    }
+
+    &__logo {
+        position: relative;
+        z-index: 5;
+        @include padding-Y(50px, unset);
+        @include padding-X(50px, unset)
+    }
+
+    &__content {
+        position: relative;
+        z-index: 5;
+        height: 100%;
+        max-width: 900px;
+        flex-direction: column;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 300px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 0 15px;
+    }
+
+    &__title {
+        font-size: rem(55);
+        font-weight: 700;
+        text-align: center;
+
+        @include tablet {
+            font-size: rem(39);
+        }
+
+        @include mobSmall {
+            font-size: rem(30);
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__input {
+        outline: none;
+        border: none;
+        @include padding-X(12px, 7px);
+        @include padding-Y(16px, 16px);
+        border-radius: 29px;
+        transition: box-shadow .2s ease;
+        font-size: 20px;
+        font-weight: 500;
+        width: 100%;
+
+        &:focus {
+            box-shadow: 0px 0px 8px 8px rgba($redder, 0.8);
+        }
+    }
+
+    &__button {
+        position: absolute;
+        right: 0;
+
+        &__wrapper {
+            font-size: 20px;
+            font-weight: 500;
+            @include padding-X(30px, 35px);
+            @include padding-Y(16px, 16px);
+            border: none;
+            outline: none;
+            background-color: $red;
+            color: $white;
+            border-radius: 29px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all .2s ease;
+
+            &:hover {
+                background-color: $redder;
+                color: #fff;
+            }
+        }
+    }
+
+    h5 {
+        font-size: rem(19);
+        font-weight: 400;
+    }
+}
